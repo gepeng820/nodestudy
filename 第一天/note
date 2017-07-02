@@ -1,0 +1,169 @@
+# 201704—_homework
+
+## git下载地址
+https://git-scm.com/
+
+windows下使用linux命令
+
+## mac下
+- 增强mac下的命令窗口 oh-my-zsh item2
+
+## cd changeDirectory
+
+## 告诉git你是谁
+git config --list 查看git配置列表（查看当前有没有配置过）
+git config --global user.name github账号名
+git config --global user.email github邮箱
+
+## 删除文件夹
+```
+rm -rf .git  (慎重使用)
+```
+
+## 要管理文件
+
+- 初始化git，告诉git哪个文件夹归你管理
+git init
+
+-> git仓库 不能嵌套
+
+ls(查看.git) ls -a 查看隐藏的
+
+## touch 创建文件
+可以创建以 .开头的文件
+
+## cat 查看文件
+
+
+## vi +文件名 打开文件
+- i 插入   a 插入
+- ESC+:wq! 保存退出
+
+
+## 增加暂存区
+```
+git add .
+```
+> 在工作区中的文件是红色的，添加到暂存区是绿色的
+
+## 添加到历史区
+```
+git commit -m'xxx'
+```
+
+##查看状态
+```
+git status
+```
+
+## 查看历史状态（查看提交日志）
+```
+git log
+```
+
+## 工作区和暂存区比较
+git diff
+
+## 暂存区和历史区
+git diff --cached
+
+## 工作区和版本库
+git diff master
+
+
+## 移除本次的add
+```
+git reset HEAD 文件名
+```
+
+## 从暂存区覆盖掉工作区
+```
+git checkout 文件名
+```
+
+## 回滚，将工作区 暂存区 历史区用同一版本全部覆盖掉
+```
+git reset --hard 版本号
+```
+
+> 想查看未来需要用
+git reflog  然后再用git reset --hard 版本号跳转版本
+
+
+## 分支管理
+```
+查看分支
+git branch
+```
+创建分支
+```
+git branch dev  (dev就是分支名字)
+```
+切换分支
+```
+git checkout dev
+```
+
+删除分支
+```
+git branch -D dev
+```
+
+
+> 创建并切换分支 git checkout -b dev
+
+> 只有将内容提交到某个分支上，这个内容才能归属于那个分支，别的分支就看不到这个内容了
+
+
+合并分支
+在master上合并dev
+```
+合并分支 git merge dev
+
+```
+
+## 提交到远程仓库
+
+- git init
+- touch .gitignore 写上忽略内容
+- 创建需要提交的文件(空文件夹不会被提交)
+- 添加到暂存区
+- 添加到历史区
+
+> 保证github是可用状态
+
+## 连接远程仓库
+```
+git remote add 别名(origin) 地址
+git remote -v 查看关联的仓库
+git remote rm 别名               可以删除链接
+```
+
+
+## 推送
+```
+git push origin master
+```
+
+## 发布github静态页
+- 必须要有一个固定的分支 (gh-pages)
+- 需要将内容发送到这个分支上
+- 在setting中可以免费送你一个网址
+```
+git checkout -b gh-pages
+touch index.html
+git add .
+git commit -m'addHtml'
+git push origin gh-pages
+```
+
+## 克隆
+```
+git clone 别人的地址 别名
+git pull origin master 即可 (冲突文件提交（历史区）后再次拉取)
+
+```
+
+## pull request
+- 可以发送合并请求（必须是fork过来的 ，才可以发送合并请求）
+
