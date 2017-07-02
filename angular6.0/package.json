@@ -1,15 +1,12 @@
 {
-  "name": "4.npm",
+  "name": "angular6.0",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "angular6.0": "^1.0.0"
-  },
-  "devDependencies": {}
+  "license": "ISC"
 }
