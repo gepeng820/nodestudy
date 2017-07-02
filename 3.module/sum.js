@@ -5,7 +5,7 @@ function sum(...arr) {
     arr.forEach(item=>total+=item);
     return total;
 }
-
+//导出的函数不要用箭头函数
 //1.module.exports=sum;
 //2.exports.sum=sum;
 //3.module.exports.sum=sum;
