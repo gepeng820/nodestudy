@@ -28,7 +28,8 @@ Man.prototype.emit=function (eventName,...args) {//除了第一个将剩下的�
     //在参数中是剩余运算符 还可以用作展开运算  [...[1,2,3],...[4,5,6]]
 
     if(this._event[eventName]){
-        this._event[eventName].forEach(item=>item(this,...args));
+        //apply传递的是数组call 传递的是一个个的
+        this._event[eventName].forEach(item=>item.call(this,...args));
     }
 };
 let man=new Man();
