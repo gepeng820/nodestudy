@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f114c1b-4277-4813-824b-366714fe6836" name="Default" comment="拓展">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/7.Buffer/1.buffer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/6.events/1.events.js" afterPath="$PROJECT_DIR$/6.events/1.events.js" />
     </list>
@@ -63,12 +64,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="1.events.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="1.events.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/6.events/1.events.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="47" column="93" lean-forward="false" selection-start-line="47" selection-start-column="93" selection-end-line="47" selection-end-column="93" />
+            <state relative-caret-position="105">
+              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1.buffer.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/7.Buffer/1.buffer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,6 +136,7 @@
         <option value="$PROJECT_DIR$/6.events/README.md" />
         <option value="$PROJECT_DIR$/6.events/1.events.html" />
         <option value="$PROJECT_DIR$/6.events/1.events.js" />
+        <option value="$PROJECT_DIR$/7.Buffer/1.buffer.js" />
       </list>
     </option>
   </component>
@@ -361,7 +375,7 @@
       <workItem from="1499004317067" duration="69000" />
       <workItem from="1499274262645" duration="28000" />
       <workItem from="1499305301227" duration="33000" />
-      <workItem from="1499480866182" duration="7561000" />
+      <workItem from="1499480866182" duration="9802000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1498966253179</created>
@@ -458,11 +472,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48791000" />
+    <option name="totallyTimeSpent" value="51032000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12872024" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -828,9 +841,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/6.events/1.events.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="47" column="93" lean-forward="false" selection-start-line="47" selection-start-column="93" selection-end-line="47" selection-end-column="93" />
+        <state relative-caret-position="105">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/7.Buffer/1.buffer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

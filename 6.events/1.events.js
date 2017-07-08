@@ -1,3 +1,10 @@
+//1.events 库 专门实现 事件的 是一个核心模块
+let EventEmitter=require('evets');
+let util=require('util');//setPrototypeOf
+function Man() {
+    util.inherits(Man,EventEmitter);
+}
+
 function Man() {
     this._event={}
 }
@@ -49,10 +56,6 @@ Man.prototype.removeListener=function (evevtName, callback) {
       })
   }
 };
-
-
-
-
 
 let man=new Man();
 function buyCar(who,who1) {
