@@ -32,6 +32,13 @@ Man.prototype.emit=function (eventName,...args) {//除了第一个将剩下的�
         this._event[eventName].forEach(item=>item.call(this,...args));
     }
 };
+Man.prototype.removeListener=function (evevtName, callback) {
+    let arr=this._event[eventName];
+  if(arr){
+      //返回true 表示放到新数组里，返回false表示不要他了，要改变的是对象中的数组，不是新声明的数组
+      this._event[eventName]=arr.filter(cb=>cb!==callback)
+  }
+};
 let man=new Man();
 function buyCar(who,who1) {
     console.log('buycarfor'+who)
@@ -40,6 +47,9 @@ function buyPack(who,who1) {
     console.log('buypackfor'+who)
 }
 man.on('有钱',buyCar);//{'有钱':[buyCar]}
+
 man.on('有钱',buyPack);//{'有钱':[buyCar,buyPack]}
 
-man.emit('有钱','妹子');//[buyCar(),buyPack()]
+man.removeListener('有钱',buyCar);
+
+man.emit('有钱','妹子','妹子2');//[buyCar(),buyPack()]
