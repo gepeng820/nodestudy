@@ -36,5 +36,7 @@ export default new Router({
       path:'*',//当以上路径都不匹配  跳转到首页
       redirect:'/home'
     }
-  ]
+  ],
+  //更改默认的名字
+  "linkActiveClass":'active'
 })
