@@ -4,4 +4,7 @@ export function b(x, y) {
     return x+y;
 }
 
+export let c=2;
+
+
 

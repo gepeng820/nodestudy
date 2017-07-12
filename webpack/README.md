@@ -1,9 +1,9 @@
 ## 安装 sass less webpack，一般采用本地安装
 - 不会导致版本冲突 （开发依赖） 上线不需要
 
-
 ## 安装webpack
 ```
+npm init
 npm install webpack --save-dev
 ```
 
