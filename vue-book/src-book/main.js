@@ -14,16 +14,17 @@ import VueScroller from 'vue-scroller';
 Vue.use(VueScroller);//会注册全局组件 scroller
 
 import VueLazyLoad from 'vue-lazyload';
-import loading from './assets/img/loading.gif'
+import loading from './assets/img/loading.gif';
 Vue.use(VueLazyLoad, {
   loading: loading//加载时显示的loading图，提供了一个
 
 })
 
-
+import store from './vuex/index';
 new Vue({
   el: '#app',
   router,
-  ...App
+  ...App,
+  store
 
 })

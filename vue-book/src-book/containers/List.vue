@@ -13,6 +13,7 @@
           <div>
             <h3>{{book.bookName}}</h3>
             <p>{{book.bookInfo}}</p>
+            <span @click="collect(book)"><i class="iconfont icon-shouc01">收藏本书</i></span>
           </div>
         </li>
       </ul>
@@ -23,6 +24,8 @@
   //组件使用的三部曲，引用注册标签形式使用
   import MHeader from '../components/MHeader.vue';
   import {getBookList} from '../api';
+  import {mapMutations} from 'vuex';
+  import * as types from '../vuex/mutation-types';
     export default {
         data(){
             return {books:[]}
@@ -33,6 +36,7 @@
         computed: {},
         components: {MHeader},
         methods: {
+          ...mapMutations([types.ADD_COLLECT]),
           getListByPage(){
               //把以前的和新获取的显示到页面上
             getBookList().then(response=>{
@@ -49,6 +53,10 @@
                 this.$refs.scroll.finishPullToRefresh();
               },500)
             })
+          },
+          collect(book){
+              this[types.ADD_COLLECT](book);
+              this.$router.push('./collect')
           }
         }
     }
@@ -71,6 +79,19 @@
       height:150px;
       margin-left: 10px;
       margin-top: 20px;
+      p{
+        color: #ccc;
+      }
+      span{
+          display: block;
+        bottom:20px;
+
+        .iconfont{
+
+          font-size: 14px;
+        }
+      }
+
     }
     img{
       height: 150px;
