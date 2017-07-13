@@ -1,6 +1,7 @@
-<template>
+<template> <!--swiper与swiper-slide是全局组件 在main.js中use了 不需要注册 -->
   <swiper :options="swiperOption">
-    <swiper-slide v-for="(slide,index) in swiperSlides":key="index">I'm Slide {{ slide }}</swiper-slide>
+    <swiper-slide v-for="(slide,index) in data" :key="index"><img :src="slide" ></swiper-slide>
+    <!--slot 会将对应的内容插到对应的部分-->
     <div class="swiper-pagination" slot="pagination"></div>
   </swiper>
 </template>
@@ -8,6 +9,11 @@
 <script>
   export default {
     name: 'carrousel',
+    props:{
+        data:{
+            type:Array
+        }
+    },
     data() {
       return {
         swiperOption: {
@@ -19,7 +25,7 @@
           mousewheelControl : true,
           observeParents:true,
         },
-        swiperSlides: [1, 2, 3, 4, 5]
+
       }
     }
 
@@ -28,5 +34,7 @@
 </script>
 
 <style scoped>
-
+img{
+  width: 100%;
+}
 </style>

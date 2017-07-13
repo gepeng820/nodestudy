@@ -1,16 +1,15 @@
 <template>
     <div>
-      <m-header title="列表"></m-header>
+    蓝色 {{$store.state.color}}
     </div>
 </template>
 <script>
-  import MHeader from '../components/MHeader.vue'
     export default {
         data(){
             return {}
         },
         computed: {},
-        components: {MHeader},
+        components: {},
         methods: {}
     }
 </script>
