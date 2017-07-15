@@ -11,7 +11,11 @@ export const mutations={
     if (!flag){
       state.collect.push(n);
     }
-  }
+  },
+  [REMOVE_COLLECT](state,m){
+    let index=state.collect.indexOf(m);
+    state.collect.splice(index,1)
+}
 };
 
 //map forEach filter reduce find(es6) some
