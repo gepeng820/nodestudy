@@ -15,17 +15,35 @@ let app=express();
 app.use(function (req, res, next) {
     let method=req.method;
     console.log(method,req.path);
-    res.setHeaer('Content-Type','charset=utf-8;')
+    res.setHeader('Content-Type','text/html;charset=utf-8');
     next();
 });
 //为响应对象添加send属性
-//send和end一样都会结束写入响应体，一旦调用以后，则不能再次调用write或end方法了，其实在send方法里面会调用edn方法
+//send和end一样都会结束写入响应体，一旦调用以后，则不能再次调用write或end方法了，其实在send方法里面会调用end方法
+let STATUS_CODES = require('_http_server').STATUS_CODES;
+
 app.use(function (req, res, next){
     //不管你是什么类型，都转为字符串，然后调用end方法
 
-    res.send=function () {
-
-    }
+    res.send=function (params) {
+        let type=typeof params;
+        //对象 数组 数字（当成状态码处理）
+        switch (type){
+            case 'object':
+                //如果参数类型是对象先转为字符串
+                params=JSON.stringify(params);
+                break;
+            case 'number':
+                res.statusCode=params;
+                //然后找到200对应的描述信息赋给params
+                params=STATUS_CODES[params];
+                break;
+            default:
+                params=params.toString();
+        }
+        res.end(params)
+    };
+    next()
 
 });
 
@@ -39,7 +57,9 @@ app.get('/',function (req, res) {
 });
 
 app.get('/user',function (req, res) {
-    res.end('用户')
+    res.send({id:1});
+    //res.end('用户')
+
 });
 
 
